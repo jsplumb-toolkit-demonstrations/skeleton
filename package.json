@@ -1,7 +1,8 @@
 {
     "dependencies": {
-        "@jsplumbtoolkit/core": "file:./jsplumbtoolkit-core.tgz",
-        "@jsplumbtoolkit/browser-ui": "file:./jsplumbtoolkit-browser-ui.tgz",
+        "@jsplumbtoolkit/browser-ui": "^5.0.0-RC1",
+        "@jsplumbtoolkit/plugin-miniview": "^5.0.0-RC1",
+        "@jsplumbtoolkit/layout-spring": "^5.0.0-RC1",
         "@jsplumb/json-syntax-highlighter": "^1.0.2",
         "@jsplumb/toolkit-demo-support": "^1.0.0"
     }
