@@ -1,7 +1,7 @@
 {
     "dependencies": {
-        "@jsplumbtoolkit/browser-ui-vanilla": "^5.0.0-RC16",
-        "@jsplumbtoolkit/browser-ui-plugin-miniview": "^5.0.0-RC16",
-        "@jsplumbtoolkit/layout-spring": "^5.0.0-RC16"
+        "@jsplumbtoolkit/browser-ui-vanilla": "^5.0.0-RC17",
+        "@jsplumbtoolkit/browser-ui-plugin-miniview": "^5.0.0-RC17",
+        "@jsplumbtoolkit/layout-spring": "^5.0.0-RC17"
     }
 }
