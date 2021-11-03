@@ -23,3 +23,15 @@
     cursor:pointer;
 }
 
+.jtk-connector path {
+    stroke: #89bcde;
+}
+
+.jtk-endpoint circle {
+    fill:#89bcde;
+}
+
+path.jtk-overlay  {
+    fill:#89bcde;
+}
+

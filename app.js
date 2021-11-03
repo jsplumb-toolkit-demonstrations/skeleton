@@ -1,4 +1,4 @@
-jsPlumbToolkit.ready(function() {
+jsPlumbToolkitBrowserUIVanilla.ready(function() {
 
     // prepare some data
     var data = {
@@ -17,7 +17,7 @@ jsPlumbToolkit.ready(function() {
     };
 
     // get a new instance of the Toolkit
-    var toolkit = jsPlumbToolkit.newInstance();
+    var toolkit = jsPlumbToolkitBrowserUIVanilla.newInstance();
 
     var mainElement = document.querySelector(".jtk-demo-main"),
         canvasElement = mainElement.querySelector(".jtk-demo-canvas"),
@@ -25,11 +25,15 @@ jsPlumbToolkit.ready(function() {
 
     // render it to the div with id 'canvas' and add a miniview. Instruct the surface to zoom out after data loading
     // so that all nodes are visible. Provide some basic jsPlumb paint defaults.
-    var renderer = toolkit.render({
-        container:canvasElement,
-        miniview:{
-            container:miniviewElement
-        },
+    var renderer = toolkit.render(canvasElement, {
+        plugins:[
+            {
+                type:"miniview",
+                options:{
+                    container:miniviewElement
+                }
+            }
+        ],
         layout:{
             type:"Spring"
         },
@@ -37,23 +41,20 @@ jsPlumbToolkit.ready(function() {
         view:{
             nodes:{
                 "default":{
-                    template:"tmplNode"
+                    templateId:"tmplNode"
                 }
             },
             edges:{
                 "default":{
                     overlays:[
-                        [ "Arrow", { location:1, width:7, length:7 }]
+                        {type: "Arrow", options:{ location:1, width:7, length:7 }}
                     ]
                 }
             }
         },
-        jsPlumb:{
-            Connector:"Bezier",
-            Anchor:"Continuous",
-            Endpoints:[ ["Dot", { radius:3 }], "Blank" ],
-            PaintStyle: { lineWidth: 1, stroke: '#89bcde' },
-            EndpointStyle: { fill:"#89bcde" }
+        defaults:{
+            anchor:"Continuous",
+            endpoints:[{type:"Dot", options:{ radius:3 }}, "Blank" ]
         }
 
     });
