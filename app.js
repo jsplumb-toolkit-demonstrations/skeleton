@@ -35,7 +35,7 @@ jsPlumbToolkitBrowserUIVanilla.ready(function() {
             }
         ],
         layout:{
-            type:"Spring"
+            type:"ForceDirected"
         },
         zoomToFit:true,
         view:{
