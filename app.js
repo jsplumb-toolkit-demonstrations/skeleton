@@ -1,4 +1,4 @@
-jsPlumbToolkitBrowserUIVanilla.ready(function() {
+jsPlumbToolkit.ready(function() {
 
     // prepare some data
     var data = {
@@ -17,7 +17,7 @@ jsPlumbToolkitBrowserUIVanilla.ready(function() {
     };
 
     // get a new instance of the Toolkit
-    var toolkit = jsPlumbToolkitBrowserUIVanilla.newInstance();
+    var toolkit = jsPlumbToolkit.newInstance();
 
     var mainElement = document.querySelector(".jtk-demo-main"),
         canvasElement = mainElement.querySelector(".jtk-demo-canvas"),
